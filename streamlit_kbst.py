@@ -10,7 +10,7 @@ kbst_model = pickle.load(open('kbst_model.sav', 'rb'))
 st.title('SISTEM PREDIKSI KELUARGA BERESIKO STUNTING')
 
 # Membuat tombol dengan tautan
-link = 'https://drive.google.com/drive/folders/1GrdNf8OjWh8OWwudIN05ZCk2A4odqvAP?usp=sharing'
+link = https://drive.google.com/drive/folders/1GrdNf8OjWh8OWwudIN05ZCk2A4odqvAP?usp=sharing
 button_spreadsheet = 'Download Sample Dataset'
 
 # Menggunakan HTML untuk membuat tautan
