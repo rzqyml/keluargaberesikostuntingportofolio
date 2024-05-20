@@ -11,11 +11,11 @@ st.title('SISTEM PREDIKSI KELUARGA BERESIKO STUNTING')
 
 # Membuat tombol dengan tautan
 link = 'https://drive.google.com/drive/folders/1GrdNf8OjWh8OWwudIN05ZCk2A4odqvAP?usp=sharing'
-button_spreadsheet = 'Download Sample Dataset'
+button_text = 'Download Sample Dataset'
 
 # Menggunakan HTML untuk membuat tautan
-if st.button(button_spreadsheet):
-    js = f"window.open('{https://drive.google.com/drive/folders/1GrdNf8OjWh8OWwudIN05ZCk2A4odqvAP?usp=sharing}')"  # Membuka tautan di tab baru
+if st.button(button_text):
+    js = f"window.open('{link}')"  # Membuka tautan di tab baru
     html = f"<script>{js}</script>"
     st.markdown(html, unsafe_allow_html=True)
 
