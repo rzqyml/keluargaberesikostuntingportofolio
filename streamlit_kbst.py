@@ -11,14 +11,14 @@ st.title('SISTEM PREDIKSI KELUARGA BERESIKO STUNTING')
 
 # Tautan yang akan diarahkan
 link = 'https://drive.google.com/drive/folders/1GrdNf8OjWh8OWwudIN05ZCk2A4odqvAP?usp=sharing'
-button_text = 'Klik di sini untuk pergi ke Example.com'
+button_text = 'Dataset Sample'
 
 # Fungsi untuk membuat tautan
 def make_link_button(link, text):
     # Menggunakan HTML untuk membuat tautan
     link_button = f"""
     <a href="{link}" target="_blank">
-        <button style="background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;">
+        <button style="background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 4px;">
             {text}
         </button>
     </a>
