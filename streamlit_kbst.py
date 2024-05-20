@@ -9,15 +9,25 @@ kbst_model = pickle.load(open('kbst_model.sav', 'rb'))
 # Judul web
 st.title('SISTEM PREDIKSI KELUARGA BERESIKO STUNTING')
 
-# Membuat tombol dengan tautan
+# Tautan yang akan diarahkan
 link = 'https://drive.google.com/drive/folders/1GrdNf8OjWh8OWwudIN05ZCk2A4odqvAP?usp=sharing'
-button_text = 'Download Sample Dataset'
+button_text = 'Klik di sini untuk pergi ke Example.com'
 
-# Menggunakan HTML untuk membuat tautan
-if st.button(button_text):
-    js = f"window.open('{link}')"  # Membuka tautan di tab baru
-    html = f"<script>{js}</script>"
-    st.markdown(html, unsafe_allow_html=True)
+# Fungsi untuk membuat tautan
+def make_link_button(link, text):
+    # Menggunakan HTML untuk membuat tautan
+    link_button = f """
+    <a href="{link}" target="_blank">
+        <button style="background-color: #4CAF50; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer;">
+            {text}
+        </button>
+    </a>
+    """
+    return link_button
+
+# Menghasilkan tombol dengan tautan
+link_button_html = make_link_button(link, button_text)
+st.markdown(link_button_html, unsafe_allow_html=True)
 
 # Upload file CSV
 uploaded_file = st.file_uploader("Unggah File Exel", type=["xlsx","xls"])
